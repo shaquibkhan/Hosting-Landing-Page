@@ -6,7 +6,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
-    <!-- font -->
     <!-- Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -16,13 +15,15 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
         integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
     <title>Document</title>
 </head>
 
 <body>
     <div class="container">
-        <!-- header starts -->
-        <header>
+        <!-- header starts for medium devices-->
+        <header class="medium-devices-header">
             <nav class="navbar">
                 <div class="brand-logo">
                     <img src="./assets/logo.png" alt="logo" class="logo" />
@@ -42,11 +43,37 @@
                 </div>
             </nav>
         </header>
+        <!-- mobile -header -->
+        <div class="md:hidden ">
+            <div class="bg-[#fff] flex items-center">
+                <button class="outline-none mobile-menu-button">
+                    <svg class="w-6 h-12 text-gray-500" x-show="!showMenu" fill="none" stroke-linecap="round"
+                        stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
+                        <path d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+            <header class="mobile-menu pt-4">
+                <ul class="flex flex-col gap-4">
+                    <li class="list-item active">Home</li>
+                    <li class="list-item">Domain</li>
+                    <li class="list-item">Hoisting</li>
+                    <li class="list-item">Features</li>
+                    <li class="list-item">Pricing</li>
+                    <li class="list-item">About Us</li>
+                    <div class="order-btn">
+                        <button class="button-small list-item">Register Now</button>
+                    </div>
+                </ul>
+            </header>
+        </div>
         <!-- section starts -->
+        <!-- section 1 -->
         <section class="server">
             <div class="text-btn-section">
                 <h1>Great Websites Start <br> with Unlimited <br> Hoisting</h1>
-                <p class="grey-me">We provide the best offer of unlimited web hoisting. The most complete <br> features, affordable
+                <p class="grey-me">We provide the best offer of unlimited web hoisting. The most complete <br> features,
+                    affordable
                     prices, and 24/7 technical support are at your <br> disposal.</p>
                 <button class="btn">Choose Package</button>
             </div>
@@ -54,17 +81,20 @@
                 <img src="./assets/server.svg" alt="">
             </div>
         </section>
+         <!-- section 2 -->
         <section class="testing">
             <div class="testing-img">
                 <img src="./assets/testing.svg" alt="">
             </div>
             <div class="text-btn-section">
                 <h1>We Provide The Best <br> Quality With Low Cost</h1>
-                <p class="grey-me">You can have a ready-made website for only a small fee. Complete <br> features will facilitate the
+                <p class="grey-me">You can have a ready-made website for only a small fee. Complete <br> features will
+                    facilitate the
                     website creation , from Auto-Install <br> WordPress, cPanel, to free SSL</p>
                 <button class="btn">Read More</button>
             </div>
         </section>
+         <!-- section 3 -->
         <section class="support">
             <div class="text-btn-section">
                 <h1>Number 1 Technical <br> Support In Indonesia</h1>
@@ -86,41 +116,41 @@
         </section>
         <!-- cards -->
         <div class="cards1">
-            <div class="card-icon">
-                <img src="./Hosting Landing Page/COCO/Bold/Cloud.png" alt="">
-                <h3>Unlimited Hoisting</h3>
+            <div class="card-icon flex flex-col gap-4">
+                <img class="big-svg" src="./assets/cloud-hosting.svg" alt="">
+                <h3 class="font-semibold text-xl">Unlimited Hoisting</h3>
                 <p>Lorem ipsum dolor sit, amet consectetur <br> elit. Atque id harum, molestiae <br> voluptas cum ipsa
                     nostrum quide</p>
             </div>
-            <div class="card-icon">
-                <img src="./Hosting Landing Page/COCO/Bold/Cloud.png" alt="">
-                <h3>Cloud Hoisting</h3>
+            <div class="card-icon flex flex-col gap-4">
+                <img class="big-svg" src="./assets/cloud-hosting.svg" alt="">
+                <h3 class="font-semibold text-xl">Cloud Hoisting</h3>
                 <p>Lorem ipsum dolor sit, amet consectetur <br> elit. Atque id harum, molestiae <br> voluptas cum ipsa
                     nostrum quide</p>
             </div>
-            <div class="card-icon">
+            <div class="card-icon flex flex-col gap-4">
                 <img src="./assets/wordpress-hosting.svg" alt="" class="icon-resize">
-                <h3>Wordpress Hoisting</h3>
+                <h3 class="font-semibold text-xl">Wordpress Hoisting</h3>
                 <p>Lorem ipsum dolor sit, amet consectetur <br> elit. Atque id harum, molestiae <br> voluptas cum ipsa
                     nostrum quide</p>
             </div>
         </div>
         <div class="cards2">
-            <div class="card-icon">
+            <div class="card-icon flex flex-col gap-4">
                 <img src="./assets/vps.svg" alt="" class="icon-resize">
-                <h3>Fastest VPS</h3>
+                <h3 class="font-semibold text-xl">Fastest VPS</h3>
                 <p>Lorem ipsum dolor sit, amet consectetur <br> elit. Atque id harum, molestiae <br> voluptas cum ipsa
                     nostrum quide</p>
             </div>
-            <div class="-icon">
+            <div class="card-icon flex flex-col gap-4">
                 <img src="./assets/Domain.svg" alt="" class="icon-resize">
-                <h3>Domain</h3>
+                <h3 class="font-semibold text-xl">Domain</h3>
                 <p>Lorem ipsum dolor sit, amet consectetur <br> elit. Atque id harum, molestiae <br> voluptas cum ipsa
                     nostrum quide</p>
             </div>
-            <div class="-icon">
+            <div class="card-icon flex flex-col gap-4">
                 <img src="./assets/builder.svg" alt="" class="icon-resize">
-                <h3>Website Builder</h3>
+                <h3 class="font-semibold text-xl">Website Builder</h3>
                 <p>Lorem ipsum dolor sit, amet consectetur <br> elit. Atque id harum, molestiae <br> voluptas cum ipsa
                     nostrum quide</p>
             </div>
@@ -129,64 +159,64 @@
     <!-- pricing -->
     <section class="pricing">
         <div class="pricing-row">
-        <h1>Flexible & Transparent Pricing</h1>
-        <div class="cards">
-            <div class="card">
-                <div class="pack-sec">
-                    <h4 class="strtr-pk">Starter Pack</h4>
-                    <p class="grey-me">Suitable for Beginners</p>
+            <h1 class="mb-8">Flexible & Transparent Pricing</h1>
+            <div class="cards">
+                <div class="card">
+                    <div class="pack-sec flex flex-col gap-4 mt-3 mb-4">
+                        <h4 class="strtr-pk">Starter Pack</h4>
+                        <p class="grey-me">Suitable for Beginners</p>
+                    </div>
+                    <div class="plan-sec flex flex-col gap-6 mt-4">
+                        <p><i class="fa-solid fa-check"></i> Up To 15,000 Visitors/Month</p>
+                        <p><i class="fa-solid fa-check"></i> Disk Space 500 MB</p>
+                        <p><i class="fa-solid fa-check"></i> Unlimited Bandwidth</p>
+                        <p><i class="fa-solid fa-check"></i> Unlimited Database</p>
+                        <p><i class="fa-solid fa-check"></i> 1 Domain</p>
+                    </div>
+                    <div class="price-sec mt-4">
+                        <h1>$29.99/<span class="grey-me">month</span></h1>
+                        <p class="grey-me">Cancel Anytime</p>
+                        <button class="pack-btn">Choose Plan</button>
+                    </div>
                 </div>
-                <div class="plan-sec">
-                    <p><i class="fa-solid fa-check"></i> Up To 15,000 Visitors/Month</p>
-                    <p><i class="fa-solid fa-check"></i> Disk Space 500 MB</p>
-                    <p><i class="fa-solid fa-check"></i> Unlimited Bandwidth</p>
-                    <p><i class="fa-solid fa-check"></i> Unlimited Database</p>
-                    <p><i class="fa-solid fa-check"></i> 1 Domain</p>
+                <div class="card">
+                    <div class="pack-sec flex flex-col gap-4 mt-3 mb-4">
+                        <h4 class="middle-pack-head">Popular Packages</h4>
+                        <p class="middle-pack-desc">Suitable for company, orginazation</p>
+                    </div>
+                    <div class="plan-sec flex flex-col gap-6 mt-4">
+                        <p><i class="fa-solid fa-check"></i> Up To 135,000 Visitors/Month</p>
+                        <p><i class="fa-solid fa-check"></i> Unlimited Disk Space</p>
+                        <p><i class="fa-solid fa-check"></i> Unlimited Bandwidth</p>
+                        <p><i class="fa-solid fa-check"></i> Unlimited POP3 Email</p>
+                        <p><i class="fa-solid fa-check"></i> Unlimited Database</p>
+                    </div>
+                    <div class="price-sec mt-4">
+                        <h1>$29.99/<span class="grey-me">month</span></h1>
+                        <p class="grey-me">Cancel Anytime</p>
+                        <button class="btn">Choose Plan</button>
+                    </div>
                 </div>
-                <div class="price-sec">
-                    <h1>$29.99/<span class="grey-me">month</span></h1>
-                    <p class="grey-me">Cancel Anytime</p>
-                    <button class="pack-btn">Choose Plan</button>
-                </div>
-            </div>
-            <div class="card">
-                <div class="pack-sec">
-                    <h4 class="middle-pack-head">Popular Packages</h4>
-                    <p class="middle-pack-desc">Suitable for company, orginazation</p>
-                </div>
-                <div class="plan-sec">
-                    <p><i class="fa-solid fa-check"></i> Up To 135,000 Visitors/Month</p>
-                    <p><i class="fa-solid fa-check"></i> Unlimited Disk Space</p>
-                    <p><i class="fa-solid fa-check"></i> Unlimited Bandwidth</p>
-                    <p><i class="fa-solid fa-check"></i> Unlimited POP3 Email</p>
-                    <p><i class="fa-solid fa-check"></i> Unlimited Database</p>
-                </div>
-                <div class="price-sec">
-                    <h1>$29.99/<span class="grey-me">month</span></h1>
-                    <p class="grey-me">Cancel Anytime</p>
-                    <button class="btn">Choose Plan</button>
-                </div>
-            </div>
-            <div class="card">
-                <div class="pack-sec">
-                    <h4 class="busi-pk">Buisness package</h4>
-                    <p class="grey-me">Suitable for buisness websites</p>
-                </div>
-                <div class="plan-sec">
-                    <p><i class="fa-solid fa-check"></i> Up To 180,000 Visitors/Month</p>
-                    <p><i class="fa-solid fa-check"></i> Disk Space 500 MB</p>
-                    <p><i class="fa-solid fa-check"></i> Unlimited Bandwidth</p>
-                    <p><i class="fa-solid fa-check"></i> Unlimited Database</p>
-                    <p><i class="fa-solid fa-check"></i> 1 Domain</p>
-                </div>
-                <div class="price-sec">
-                    <h1>$29.99/<span class="grey-me">month</span></h1>
-                    <p class="grey-me">Cancel Anytime</p>
-                    <button class="pack-btn">Choose Plan</button>
+                <div class="card">
+                    <div class="pack-sec flex flex-col gap-4 mt-3 mb-4">
+                        <h4 class="busi-pk">Buisness package</h4>
+                        <p class="grey-me">Suitable for buisness websites</p>
+                    </div>
+                    <div class="plan-sec flex flex-col gap-6 mt-4">
+                        <p><i class="fa-solid fa-check"></i> Up To 180,000 Visitors/Month</p>
+                        <p><i class="fa-solid fa-check"></i> Disk Space 500 MB</p>
+                        <p><i class="fa-solid fa-check"></i> Unlimited Bandwidth</p>
+                        <p><i class="fa-solid fa-check"></i> Unlimited Database</p>
+                        <p><i class="fa-solid fa-check"></i> 1 Domain</p>
+                    </div>
+                    <div class="price-sec">
+                        <h1>$29.99/<span class="grey-me">month</span></h1>
+                        <p class="grey-me">Cancel Anytime</p>
+                        <button class="pack-btn">Choose Plan</button>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
     </section>
     <!-- customer section -->
     <div class="container">
@@ -198,7 +228,7 @@
             </p>
             <div class="cx-card">
                 <div class="customer-cards-row-1">
-                    <div class="customer-card">
+                    <div class="customer-card ">
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi deleniti iure nostrum, sit
                             illo repellat at, enim aspernatur reprehenderit dicta a necessitatibus ducimus odio omnis
                             eius alias totam deserunt! Necessitatibus.</p>
@@ -248,44 +278,46 @@
             </div>
         </div>
         <div class="container">
-        <div class="footer-row-2">
-            <div class="logo-footer">
-                <img src=".//assets/Logo.png" alt="footer-logo">
-                <p class="grey-me">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Pariatur <br> iusto molestiae esse eos, ab debitis unde quas beatae.</p>
-            </div>
-            <div class="footer-link">
-            <div class="menu-footer">
-                <h3>Menu</h3>
-                <li class="grey-me">Menu</li>
-                <li class="grey-me">Covid19</li>
-                <li class="grey-me">Vaccine Info</li>
-                <li class="grey-me">Contact Us</li>
-            </div>
-            <div class="link-footer">
-                <h3>Links</h3>
-                <li class="grey-me">Partners</li>
-                <li class="grey-me">Careers</li>
-                <li class="grey-me">Press</li>
-                <li class="grey-me">Community</li>
-            </div>
-            <div class="overview-footer">
-                <h3>Overview</h3>
-                <li class="grey-me">Terms & COnditions</li>
-                <li class="grey-me">Privacy Policy</li>
-                <li class="grey-me">FAQ</li>
+            <div class="footer-row-2">
+                <div class="logo-footer">
+                    <img src=".//assets/Logo.png" alt="footer-logo">
+                    <p class="grey-me">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Pariatur <br> iusto
+                        molestiae esse eos, ab debitis unde quas beatae.</p>
+                </div>
+                <div class="footer-link">
+                    <div class="menu-footer">
+                        <h3>Menu</h3>
+                        <li class="grey-me">Menu</li>
+                        <li class="grey-me">Covid19</li>
+                        <li class="grey-me">Vaccine Info</li>
+                        <li class="grey-me">Contact Us</li>
+                    </div>
+                    <div class="link-footer">
+                        <h3>Links</h3>
+                        <li class="grey-me">Partners</li>
+                        <li class="grey-me">Careers</li>
+                        <li class="grey-me">Press</li>
+                        <li class="grey-me">Community</li>
+                    </div>
+                    <div class="overview-footer">
+                        <h3>Overview</h3>
+                        <li class="grey-me">Terms & COnditions</li>
+                        <li class="grey-me">Privacy Policy</li>
+                        <li class="grey-me">FAQ</li>
+                    </div>
+                </div>
+                <div class="social-footer">
+                    <h3>Social Media</h3>
+                    <img src="./assets/fb.svg" alt="fb-icon">
+                    <img src="./assets/ig.svg" alt="ig-icon">
+                    <img src="./assets/youtube.svg" alt="yt-icon">
+                    <img src="./assets/linked-in.svg" alt="li-icon">
+                </div>
             </div>
         </div>
-        <div class="social-footer">
-            <h3>Social Media</h3>
-            <img src="./assets/fb.svg" alt="fb-icon">
-            <img src="./assets/ig.svg" alt="ig-icon">
-            <img src="./assets/youtube.svg" alt="yt-icon">
-            <img src="./assets/linked-in.svg" alt="li-icon">
-        </div>
-        </div>
-    </div>
-
     </footer>
+
+ <script src="./action.js"></script>   
 </body>
 
 </html>
